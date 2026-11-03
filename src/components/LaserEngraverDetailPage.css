@@ -1,0 +1,1194 @@
+/* LaserEngraverDetailPage.css */
+
+.engraver-detail-page {
+  font-family: inherit;
+  color: #1e293b;
+  background-color: #ffffff;
+}
+
+/* Breadcrumb Bar */
+.engraver-breadcrumb-bar {
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+}
+
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+}
+
+.btn-back-link {
+  background: none;
+  border: none;
+  color: #BED35D;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.btn-back-link:hover {
+  color: #b7040f;
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: #cbd5e1;
+}
+
+.breadcrumb-current {
+  color: #334155;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.engraver-hero-banner {
+  position: relative;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.5) 0%, rgba(30, 41, 59, 0.3) 100%), url('/images/hero_workshop_laser_hd.jpg') center/cover no-repeat;
+  color: #ffffff;
+  padding: 5.5rem 0;
+  overflow: hidden;
+}
+
+.engraver-hero-banner .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(190, 211, 93, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.engraver-hero-content {
+  max-width: 860px;
+}
+
+.engraver-hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.engraver-hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.engraver-hero-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+}
+
+.engraver-hero-bullets .bullet-icon {
+  color: #BED35D;
+  background: rgba(190, 211, 93, 0.15);
+  border-radius: 50%;
+  padding: 2px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Buttons - Reference Lime-Green Pill Design */
+.btn-trotec-red {
+  background-color: #c0d85a;
+  color: #0f172a !important;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.7rem 0.85rem 0.7rem 1.75rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(192, 216, 90, 0.4);
+}
+
+.btn-trotec-red:hover {
+  background-color: #b2cc45;
+  color: #0f172a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(192, 216, 90, 0.55);
+}
+
+.btn-trotec-red svg {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-radius: 50%;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.btn-trotec-red:hover svg {
+  transform: translateX(2px);
+}
+
+.btn-outline-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #c0d85a;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(192, 216, 90, 0.45);
+}
+
+.btn-outline-red:hover {
+  background-color: #adc34a;
+  box-shadow: 0 8px 22px rgba(192, 216, 90, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-outline-red.sm {
+  font-size: 0.875rem;
+  padding: 0.5rem 1.25rem;
+}
+
+
+/* Sticky Sub-Nav */
+.engraver-subnav-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.engraver-subnav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  scrollbar-width: none;
+}
+
+.engraver-subnav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.subnav-item {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.subnav-item:hover {
+  color: #0f172a;
+  background-color: #f1f5f9;
+}
+
+.subnav-item.active {
+  color: #BED35D;
+  background-color: rgba(190, 211, 93, 0.08);
+  font-weight: 700;
+}
+
+/* Section Styling */
+.engraver-section {
+  padding: 2.5rem 0;
+}
+
+.engraver-section.bg-light {
+  background-color: #f8fafc;
+}
+
+.engraver-section.bg-dark {
+  background-color: #111827;
+  color: #111827;
+}
+
+.section-heading h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.engraver-section.bg-dark .section-heading h2 {
+  color: #ffffff;
+}
+
+.section-subtext {
+  font-size: 1.05rem;
+  color: #64748b;
+  max-width: 820px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+/* 3. Advantages Grid */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.advantage-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.advantage-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.875rem;
+  line-height: 1.35;
+}
+
+.advantage-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* 4. Glance Card Container */
+.glance-card-container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.glance-machine-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #f1f5f9;
+  border-bottom: 3px solid #BED35D;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px 8px 0 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.glance-icon {
+  width: 48px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.glance-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 1.75rem 0 1rem 0;
+  line-height: 1.4;
+}
+
+.glance-desc {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.glance-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.glance-diagram-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nested-bed-box {
+  border: 2px dashed #94a3b8;
+  background-color: rgba(226, 232, 240, 0.5);
+  padding: 0.875rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.bed-400 {
+  width: 100%;
+  min-height: 240px;
+  border-color: #64748b;
+  background-color: rgba(100, 116, 139, 0.08);
+}
+
+.bed-360 {
+  width: 82%;
+  min-height: 190px;
+  border-color: #0284c7;
+  background-color: rgba(2, 132, 199, 0.08);
+}
+
+.bed-300 {
+  width: 72%;
+  min-height: 140px;
+  border-color: #16a34a;
+  background-color: rgba(22, 163, 74, 0.08);
+}
+
+.bed-100 {
+  width: 60%;
+  min-height: 90px;
+  border-color: #BED35D;
+  background-color: rgba(190, 211, 93, 0.08);
+}
+
+.bed-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  display: block;
+}
+
+.bed-size {
+  font-size: 0.75rem;
+  color: #64748b;
+  display: block;
+}
+
+/* Specs Table */
+.glance-specs-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.specs-box-header {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.specs-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.specs-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.specs-label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.specs-value {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* 5. Applications Grid */
+.app-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 6rem;
+}
+
+.app-cat-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease;
+}
+
+.app-cat-card:hover {
+  transform: translateY(-4px);
+}
+
+.app-cat-img-wrap {
+  height: 140px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.app-cat-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.app-cat-card:hover .app-cat-img-wrap img {
+  transform: scale(1.05);
+}
+
+.app-cat-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  padding: 1rem 0.75rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Detailed Rows */
+.app-detailed-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.app-detail-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.app-detail-media {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hero-img-box {
+  position: relative;
+  width: 100%;
+  height: 320px;
+}
+
+.hero-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-overlay-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.85));
+  padding: 2rem 1.5rem 1.25rem 1.5rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.rounded-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.app-detail-content h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}
+
+.app-detail-content p {
+  font-size: 0.975rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* 6. eBook Banner */
+.ebook-banner-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.ebook-text-side h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.ebook-text-side p {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.ebook-banner-image {
+  width: 100%;
+  max-width: 480px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.ebook-banner-image:hover {
+  transform: scale(1.02);
+}
+
+/* 7. Materials Table */
+.material-filter-tabs {
+  display: inline-flex;
+  background-color: #e2e8f0;
+  padding: 4px;
+  border-radius: 9999px;
+  margin-top: 1rem;
+}
+
+.mat-tab {
+  background: none;
+  border: none;
+  padding: 0.5rem 1.75rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #64748b;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mat-tab.active {
+  background-color: #BED35D;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(190, 211, 93, 0.3);
+}
+
+.materials-table-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.materials-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.materials-matrix-table th {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-weight: 700;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.materials-matrix-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+}
+
+.td-material-name {
+  font-weight: 600;
+  color: #334155;
+}
+
+.check-green {
+  color: #16a34a;
+}
+
+.dash-gray {
+  color: #cbd5e1;
+  font-size: 1.2rem;
+}
+
+/* 8. Help Banner */
+.help-choosing-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 16px;
+  padding: 2.5rem 3.5rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+}
+
+.help-avatar-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #BED35D;
+  flex-shrink: 0;
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-text h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* 9. Testimonials */
+.testimonials-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.testimonial-img-box {
+  position: relative;
+  height: 200px;
+}
+
+.testimonial-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.9));
+  padding: 1.5rem 1rem 0.75rem 1rem;
+  color: #ffffff;
+}
+
+.testimonial-tag strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.testimonial-tag span {
+  font-size: 0.75rem;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.testimonial-card-body {
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* 10. Ruby Workflow Steps */
+.ruby-steps-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.ruby-step {
+  flex: 1;
+  min-width: 180px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+
+.ruby-step:hover {
+  transform: translateY(-4px);
+  border-color: #BED35D;
+}
+
+.ruby-icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(190, 211, 93, 0.1);
+  color: #BED35D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+}
+
+.ruby-step h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ruby-step-arrow {
+  color: #cbd5e1;
+  flex-shrink: 0;
+}
+
+/* 11. Accessories Grid */
+.accessories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.accessory-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease;
+}
+
+.accessory-card:hover {
+  transform: translateY(-4px);
+}
+
+.acc-img-wrap {
+  height: 180px;
+  background-color: #f1f5f9;
+}
+
+.acc-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.acc-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.acc-card-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.acc-card-body p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+/* 12. Guide Cards Grid */
+.guide-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.guide-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2.25rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-icon-header {
+  color: #BED35D;
+  margin-bottom: 1.25rem;
+}
+
+.guide-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.875rem;
+}
+
+.guide-card p {
+  font-size: 0.925rem;
+  color: #475569;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+
+/* 13. Mechanical Comparison Box */
+.mech-comparison-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  margin-top: 2rem;
+}
+
+.mech-content-side h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
+}
+
+.mech-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mech-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.925rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.mech-bullets .check-green {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* 14. Company ROI & Power Table */
+.benefit-content-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.benefit-block h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.875rem;
+}
+
+.benefit-block p {
+  font-size: 0.975rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.power-table-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.power-table-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.power-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.power-matrix-table th {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-weight: 700;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 2px solid #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.power-matrix-table td {
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+/* 15. Inspired & Pricing Banners */
+.inspired-banner-grid,
+.pricing-banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.inspired-content h2,
+.pricing-content h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.inspired-content p,
+.pricing-content p {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* 17. Form Section */
+.inquiry-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.inquiry-text h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.inquiry-text p {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.inquiry-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inquiry-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.check-red {
+  color: #BED35D;
+}
+
+.inquiry-form-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+}
+
+.engraver-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #0f172a;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #BED35D;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-success-box {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.success-icon {
+  color: #16a34a;
+  margin-bottom: 1rem;
+}
+
+.form-success-box h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.form-success-box p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .glance-grid-layout,
+  .app-detail-row,
+  .ebook-banner-card,
+  .mech-comparison-box,
+  .inspired-banner-grid,
+  .pricing-banner-grid,
+  .inquiry-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .app-detail-row.reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .help-choosing-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .ruby-steps-container {
+    flex-direction: column;
+  }
+
+  .ruby-step-arrow {
+    transform: rotate(90deg);
+  }
+}

@@ -1,0 +1,694 @@
+/* ==========================================================================
+   SpeedMarker Series Detail Page - Exact Official Trotec Webpage Match
+   ========================================================================== */
+
+.speedmarker-detail-page {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Sticky Topbar Header */
+.speedmarker-topbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.speedmarker-topbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-back-overview {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #111827;
+  background: var(--color-green, #BED35D);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.35s ease, 
+              background-color 0.25s ease;
+  box-shadow: 0 4px 14px rgba(190, 211, 93, 0.45);
+  text-decoration: none;
+}
+
+.btn-back-overview:hover {
+  background-color: var(--color-green-hover, #adc34a);
+  color: #111827;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(190, 211, 93, 0.6);
+}
+
+/* Hero Section with Background Facility Image & Dark Overlay */
+.speedmarker-hero-banner {
+  position: relative;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.75) 100%), url('/images/hero_workshop_laser_hd.jpg') center/cover no-repeat;
+  padding: 5.5rem 0 6rem;
+  color: #ffffff;
+}
+
+.hero-banner-content {
+  max-width: 800px;
+}
+
+.hero-banner-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.12;
+  margin-bottom: 1.75rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.hero-banner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-banner-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-banner-item svg {
+  color: #22c55e;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.hero-banner-actions {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Brand Green Button System (Matching Header Talk to an Expert Pill Button) */
+.btn-trotec-red, .btn-eline-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-green, #BED35D);
+  color: #111827;
+  font-size: 0.95rem;
+  font-weight: 800;
+  height: 48px;
+  padding: 0 1.8rem;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.35s ease, 
+              background-color 0.25s ease;
+  box-shadow: 0 4px 14px rgba(190, 211, 93, 0.45);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-trotec-red:hover, .btn-eline-red:hover {
+  background-color: var(--color-green-hover, #adc34a);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(190, 211, 93, 0.6);
+  color: #111827;
+}
+
+.btn-trotec-white-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  height: 48px;
+  padding: 0 1.8rem;
+  border-radius: 100px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-trotec-white-outline:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.btn-trotec-red-outline, .btn-eline-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background-color: #ffffff;
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 800;
+  height: 48px;
+  padding: 0 1.8rem;
+  border-radius: 100px;
+  border: 2px solid #cbd5e1;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-trotec-red-outline:hover, .btn-eline-outline:hover {
+  border-color: var(--color-green, #BED35D);
+  color: #111827;
+  transform: translateY(-2px);
+}
+
+.btn-eline-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background-color: var(--color-green, #BED35D);
+  color: #111827;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.85rem 1.85rem;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.35s ease, 
+              background-color 0.25s ease;
+  box-shadow: 0 4px 14px rgba(190, 211, 93, 0.45);
+  text-decoration: none;
+}
+
+.btn-eline-red:hover {
+  background-color: var(--color-green-hover, #adc34a);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(190, 211, 93, 0.6);
+  color: #111827;
+}
+
+.btn-eline-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background-color: transparent;
+  color: #BED35D;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.8rem 1.65rem;
+  border-radius: 6px;
+  border: 2px solid #BED35D;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-eline-outline:hover {
+  background-color: rgba(190, 211, 93, 0.06);
+  transform: translateY(-2px);
+  color: #BED35D;
+}
+
+/* Sticky Sub-nav Ribbon Bar */
+.speedmarker-subnav-ribbon {
+  background: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.85rem 0;
+  position: sticky;
+  top: 65px;
+  z-index: 45;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.speedmarker-subnav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.25rem;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.speedmarker-subnav-flex button {
+  background: transparent;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0.2rem 0;
+}
+
+.speedmarker-subnav-flex button:hover, .speedmarker-subnav-flex button.active {
+  color: var(--color-green-dark, #7e9420);
+}
+
+/* White Card Container Section */
+.speedmarker-main-card-section {
+  padding: 4.5rem 0 5.5rem;
+  background: #f8fafc;
+}
+
+.speedmarker-white-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 3.5rem 3rem;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+}
+
+.models-header-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.models-header-subtitle {
+  font-size: 1.05rem;
+  color: #475569;
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto 3rem;
+  line-height: 1.65;
+}
+
+/* Models Selector Row with Machines Photos */
+.models-images-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.model-photo-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.75rem 0.5rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 130px;
+}
+
+.model-photo-btn.active, .model-photo-btn:hover {
+  border-bottom-color: var(--color-green, #BED35D);
+}
+
+.model-photo-btn.active .model-name {
+  color: var(--color-green-dark, #7e9420);
+  font-weight: 800;
+}
+
+.model-photo-btn img {
+  height: 110px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+  transition: transform 0.25s ease;
+}
+
+.model-photo-btn:hover img {
+  transform: translateY(-4px);
+}
+
+.model-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f2b48;
+  white-space: nowrap;
+}
+
+.model-description-text {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+/* Technical Data Box Split */
+.tech-data-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.blueprint-diagram-box {
+  background: #f1f5f9;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.diagram-outline {
+  width: 90%;
+  height: 180px;
+  border: 2px dashed #94a3b8;
+  background: rgba(226, 232, 240, 0.6);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.diagram-inner {
+  width: 70%;
+  height: 120px;
+  border: 1px dashed #cbd5e1;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.diagram-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f2b48;
+  align-self: flex-start;
+}
+
+.tech-table-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f2b48;
+  margin-bottom: 1.25rem;
+}
+
+.official-tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.official-tech-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.official-tech-table td {
+  padding: 0.9rem 1.25rem;
+  font-size: 0.92rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.official-tech-table td.prop-name {
+  font-weight: 700;
+  color: #0f2b48;
+  width: 50%;
+}
+
+.official-tech-table td.prop-val {
+  color: #334155;
+}
+
+.tech-buttons-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Side-by-Side Split Feature Sections */
+.speedmarker-split-section {
+  padding: 5rem 0;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.speedmarker-split-section.alt-bg {
+  background: #f8fafc;
+}
+
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.split-visual-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  background: #0f172a;
+}
+
+.split-visual-card img {
+  width: 100%;
+  height: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  filter: contrast(1.15) brightness(1.05) saturate(1.1);
+}
+
+.split-text h3 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f2b48;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.split-text p.lead {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 1.75rem;
+}
+
+.split-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.split-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.94rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.split-bullet-item svg {
+  color: var(--color-green-dark, #7e9420);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Software Dark Section */
+.software-dark-section {
+  padding: 5.5rem 0;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.software-outline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.software-outline-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease;
+}
+
+.software-outline-card:hover {
+  border-color: var(--color-green, #BED35D);
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-4px);
+}
+
+.software-outline-card h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+}
+
+.software-outline-card p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.55;
+}
+
+/* Accordions Grid */
+.accordion-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.accordion-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  padding: 1.25rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.accordion-card:hover {
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion-header h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f2b48;
+}
+
+.accordion-icon-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--color-green, #BED35D);
+  color: var(--color-green-dark, #7e9420);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.accordion-content {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+/* Material Compatibility & Stories */
+.mat-tab-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.mat-tab-btn {
+  padding: 0.65rem 1.75rem;
+  border-radius: 100px;
+  border: 2px solid #cbd5e1;
+  background: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mat-tab-btn.active {
+  background: var(--color-green, #BED35D);
+  color: #111827;
+  border-color: var(--color-green, #BED35D);
+}
+
+.mat-table-wrapper {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.mat-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.mat-table th {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.mat-table td {
+  padding: 0.9rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+}
+
+/* Form Wrapper */
+.eline-form-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 992px) {
+  .tech-data-container,
+  .split-grid,
+  .accordion-grid-2,
+  .software-outline-grid {
+    grid-template-columns: 1fr;
+  }
+}

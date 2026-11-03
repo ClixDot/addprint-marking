@@ -1,0 +1,537 @@
+/* ==========================================================================
+   Laser Materials Detail Page Styles (Matching Website Theme System)
+   ========================================================================== */
+
+.laser-materials-detail-page {
+  background-color: #ffffff;
+  color: #1e293b;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  padding-top: 75px;
+}
+
+/* 1. Hero Section */
+.mat-hero-banner {
+  position: relative;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.5) 0%, rgba(30, 41, 59, 0.3) 100%), url('/images/hero_workshop_laser_hd.jpg') center/cover no-repeat;
+  padding: 5.5rem 0 6rem;
+  color: #ffffff;
+}
+
+.mat-hero-content {
+  max-width: 820px;
+}
+
+.mat-hero-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  color: #ffffff !important;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.mat-hero-sub {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.25rem;
+}
+
+.mat-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* 2. Category Grid Bar */
+.mat-categories-section {
+  padding: 5rem 0 4.5rem;
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mat-cat-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 3.5rem;
+}
+
+.mat-cat-header h2 {
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: #0f2b48;
+  margin-bottom: 1rem;
+}
+
+.mat-cat-header p {
+  font-size: 1.02rem;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.mat-cat-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+}
+
+.mat-cat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mat-cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: var(--color-green, #BED35D);
+}
+
+.mat-cat-img-box {
+  width: 100%;
+  height: 120px;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.mat-cat-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.mat-cat-card:hover .mat-cat-img-box img {
+  transform: scale(1.08);
+}
+
+.mat-cat-name {
+  padding: 0.9rem 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #0f2b48;
+}
+
+/* 3. Detailed Category Showcase Blocks */
+.mat-showcase-section {
+  padding: 5rem 0;
+}
+
+.mat-showcase-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.mat-showcase-split:last-child {
+  margin-bottom: 0;
+}
+
+.mat-showcase-split.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.mat-showcase-info h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f2b48;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.mat-showcase-sub {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-green-dark, #7e9420);
+  margin-bottom: 1rem;
+}
+
+.mat-showcase-info p {
+  font-size: 0.98rem;
+  color: #475569;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.mat-bullets-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.mat-bullets-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.mat-bullets-list li svg {
+  color: var(--color-green-dark, #7e9420);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.mat-note-box {
+  background-color: var(--color-green-light, #f5f8e6);
+  border: 1px solid rgba(190, 211, 93, 0.4);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.55;
+  margin-bottom: 1.75rem;
+}
+
+.mat-showcase-media {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+  height: 380px;
+  background: #f1f5f9;
+}
+
+.mat-showcase-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 3B. Applications Gallery Section (Img1 to 8) */
+.mat-gallery-section {
+  padding: 5.5rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.mat-gallery-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+}
+
+.mat-gallery-header h2 {
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #0f2b48;
+  margin-bottom: 0.75rem;
+}
+
+.mat-gallery-header p {
+  font-size: 1.02rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.mat-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.mat-gallery-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-green, #BED35D);
+}
+
+.mat-gallery-img-box {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.mat-gallery-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.mat-gallery-card:hover .mat-gallery-img-box img {
+  transform: scale(1.07);
+}
+
+.mat-gallery-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 43, 72, 0.88);
+  backdrop-filter: blur(8px);
+  color: var(--color-green, #BED35D);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 100px;
+  letter-spacing: 0.03em;
+}
+
+.mat-gallery-info {
+  padding: 1.25rem;
+}
+
+.mat-gallery-info h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f2b48;
+  margin-bottom: 0.35rem;
+}
+
+.mat-gallery-info p {
+  font-size: 0.84rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 4. Why Trotec Materials & Quality Pillars */
+.mat-why-section {
+  padding: 5.5rem 0;
+  background-color: #f8fafc;
+  border-y: 1px solid #e2e8f0;
+}
+
+.mat-why-header {
+  max-width: 880px;
+  margin-bottom: 3.5rem;
+}
+
+.mat-why-header h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #0f2b48;
+  margin-bottom: 1rem;
+}
+
+.mat-why-header p {
+  font-size: 1.02rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.mat-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.mat-pillar-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-pillar-img-box {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background: #f1f5f9;
+}
+
+.mat-pillar-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.mat-pillar-card:hover .mat-pillar-img-box img {
+  transform: scale(1.05);
+}
+
+.mat-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+  border-color: rgba(190, 211, 93, 0.6);
+}
+
+.mat-pillar-card h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f2b48;
+  margin-bottom: 0.85rem;
+  line-height: 1.3;
+}
+
+.mat-pillar-card p {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+/* 5. Bottom Machine Callout Banner */
+.mat-machine-callout {
+  padding: 4.5rem 0 0;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.mat-callout-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.mat-callout-text h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f2b48 !important;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.mat-callout-text p {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+.mat-callout-image-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.mat-callout-image-box img {
+  max-width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .mat-callout-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mat-callout-image-box {
+    justify-content: center;
+  }
+}
+
+/* 6. Form Section */
+.mat-form-section {
+  padding: 5.5rem 0;
+  background: #ffffff;
+}
+
+.mat-form-card {
+  max-width: 780px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+}
+
+.mat-form-head {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mat-form-head h2 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #0f2b48;
+  margin-bottom: 0.5rem;
+}
+
+.mat-form-head p {
+  font-size: 0.98rem;
+  color: #64748b;
+}
+
+.mat-check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.mat-check-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mat-cat-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mat-showcase-split,
+  .mat-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .mat-showcase-media {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mat-cat-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mat-check-grid {
+    grid-template-columns: 1fr;
+  }
+}

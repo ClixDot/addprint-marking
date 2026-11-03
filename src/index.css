@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Colors - Exact Reference Brand Color */
+  --color-white: #ffffff;
+  --color-light-gray: #f8f9fa;
+  --color-border: #e5e7eb;
+  --color-charcoal: #111827;
+  --color-charcoal-light: #374151;
+  --color-green: #BED35D;
+  --color-green-hover: #adc34a;
+  --color-green-dark: #7e9420;
+  --color-green-light: #f5f8e6;
+  --color-green-rgb: 190, 211, 93;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  
+  /* Layout */
+  --container-width: 1280px;
+  --section-padding: 2.75rem 1rem;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-green: 0 4px 14px 0 rgba(190, 211, 93, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-charcoal-light);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-charcoal);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: 1.25rem; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+@media (max-width: 992px) {
+  .section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.section-light {
+  background-color: var(--color-light-gray);
+}
+
+/* =============================================================
+   GLOBAL FORM ELEMENT RESET — Force white on all inputs/selects
+   ============================================================= */
+input,
+select,
+textarea {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af !important;
+  opacity: 1;
+}
+
+select option {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+input:autofill,
+input:-webkit-autofill {
+  background-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #111827 !important;
+}
+
+
+
+.text-center { text-align: center; }
+.text-green { color: var(--color-green); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 11px 26px;
+  font-weight: 700;
+  border-radius: 100px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.35s ease, 
+              background-color 0.25s ease, 
+              border-color 0.25s ease, 
+              color 0.25s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Advanced Shimmer Sheen Beam Sweep */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-22deg);
+  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.btn:hover::after {
+  left: 160%;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+.btn > svg {
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn:hover > svg {
+  transform: translateX(5px);
+}
+
+/* White Circle Background for Arrow with Advanced Spring Hover */
+.btn-arrow-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: -4px;
+  color: #111827;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              background-color 0.25s ease, 
+              box-shadow 0.35s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.btn-arrow-circle svg {
+  width: 14px;
+  height: 14px;
+  margin-left: 0;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn:hover .btn-arrow-circle {
+  transform: translateX(4px) scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18), 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+.btn:hover .btn-arrow-circle svg {
+  transform: translateX(2px);
+}
+
+/* Primary Green Button with Luminous Aura */
+.btn-primary {
+  background-color: var(--color-green);
+  border-color: transparent;
+  color: #111827;
+  box-shadow: 0 4px 14px rgba(190, 211, 93, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-green-hover);
+  color: #111827;
+  box-shadow: 0 10px 24px -2px rgba(190, 211, 93, 0.6), 0 0 18px 2px rgba(190, 211, 93, 0.3);
+}
+
+/* Secondary Button → Lime Green Pill (matches primary reference) */
+.btn-secondary {
+  background-color: var(--color-green);
+  color: #111827;
+  border: none;
+  box-shadow: 0 4px 14px rgba(190, 211, 93, 0.4);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-green-hover);
+  color: #111827;
+  box-shadow: 0 10px 24px -2px rgba(190, 211, 93, 0.6), 0 0 18px 2px rgba(190, 211, 93, 0.3);
+}
+
+/* Labels */
+.label-small {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-green);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   GLOBAL ANIMATIONS & SCROLL REVEAL SYSTEM
+   ============================================================ */
+
+/* Base hidden state for scroll animated elements */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Directional variants */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays for grids */
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.19s; }
+.stagger-4 { transition-delay: 0.26s; }
+.stagger-5 { transition-delay: 0.33s; }
+.stagger-6 { transition-delay: 0.40s; }
+
+/* Interactive Hover Micro-animations */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: rotate(30deg) translateY(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn:hover::after {
+  transform: rotate(30deg) translateY(100%);
+}
+
+/* Smooth Card Hover Lift */
+.product-card,
+.solution-card,
+.service-card,
+.trust-item,
+.material-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+
+/* Pulse animation */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(0, 166, 81, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 166, 81, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 166, 81, 0); }
+}
+
+.pulse-active {
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* Global Back to All Products Button Hidden */
+.btn-back-overview {
+  display: none !important;
+}
+

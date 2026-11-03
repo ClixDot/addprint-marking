@@ -1,0 +1,129 @@
+.trust-strip-section {
+  padding: 4.5rem 0 3.5rem;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.trust-strip-card {
+  position: relative;
+  background-color: var(--color-green);
+  /* Laser Grid Pattern & Gradient */
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.24) 1.5px, transparent 1.5px),
+    linear-gradient(135deg, #BED35D 0%, #b2cb49 50%, #9cb833 100%);
+  background-size: 24px 24px, 100% 100%;
+  padding: 3.75rem 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 14px 40px rgba(170, 195, 65, 0.32);
+  overflow: hidden;
+}
+
+/* Background Geometric Shapes */
+.trust-strip-card::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 40px rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.trust-strip-card::after {
+  content: '';
+  position: absolute;
+  bottom: -90px;
+  left: -40px;
+  width: 260px;
+  height: 260px;
+  border: 2px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: slowRotate 45s linear infinite;
+}
+
+@keyframes slowRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.trust-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  text-align: center;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  transition: transform var(--transition-fast);
+}
+
+.trust-item:hover {
+  transform: translateY(-4px);
+}
+
+.trust-number {
+  font-size: 2.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+  letter-spacing: -0.02em;
+}
+
+.trust-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 992px) {
+  .trust-strip-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .trust-strip-card {
+    padding: 2.5rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .trust-strip-section {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .trust-strip-card {
+    padding: 1.75rem 1rem;
+    border-radius: 16px;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .trust-item {
+    padding: 0.75rem 0.5rem;
+  }
+}

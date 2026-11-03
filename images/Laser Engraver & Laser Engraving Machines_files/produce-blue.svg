@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 24 24" version="1.1" id="svg15" sodipodi:docname="produce-blue.svg" inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata id="metadata19"></metadata>
+  <defs id="defs4">
+    <style id="style2">.cls-1{stroke:#020203;stroke-miterlimit:10;stroke-width:0;}</style>
+  </defs>
+  <title id="title6">20200227_iconset_Pfade_schwarz</title>
+  <g id="Ebene_1" data-name="Ebene 1" style="fill:#2f536c;fill-opacity:1">
+    <path d="M23,4.086H1v15H23ZM6.75,9.837h10.5v3.5H6.75Zm10.5-1.5H6.75V5.586h10.5ZM2.5,17.586v-12H5.25v12Zm4.25,0V14.837h10.5v2.749Zm14.75,0H18.75v-12H21.5Z" id="path8" style="fill:#2f536c;fill-opacity:1"></path>
+    <path class="cls-1" d="M4.5,21.586a1.5,1.5,0,0,0,1.5-1.5H3A1.5,1.5,0,0,0,4.5,21.586Z" id="path10" style="fill:#2f536c;fill-opacity:1"></path>
+    <path class="cls-1" d="M19.5,21.586a1.5,1.5,0,0,0,1.5-1.5H18A1.5,1.5,0,0,0,19.5,21.586Z" id="path12" style="fill:#2f536c;fill-opacity:1"></path>
+  </g>
+</svg>

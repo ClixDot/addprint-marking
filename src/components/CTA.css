@@ -1,0 +1,329 @@
+.cta-luminous-section {
+  padding: 3rem 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-luminous-card {
+  position: relative;
+  background: linear-gradient(135deg, #f3f8d8 0%, #ffffff 50%, #eaf4c2 100%);
+  border: 1.5px solid rgba(190, 211, 93, 0.45);
+  border-radius: 36px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 50px rgba(190, 211, 93, 0.16);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Background Gradients & Ambient Orbs */
+.cta-pattern-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(190, 211, 93, 0.28) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.cta-glow-orb {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(60px);
+  opacity: 0.6;
+}
+
+.cta-glow-orb.top-left {
+  top: -100px;
+  left: -80px;
+  background: rgba(190, 211, 93, 0.4);
+  animation: orbFloatLeft 9s ease-in-out infinite alternate;
+}
+
+.cta-glow-orb.bottom-right {
+  bottom: -100px;
+  right: -80px;
+  background: rgba(175, 205, 55, 0.35);
+  animation: orbFloatRight 11s ease-in-out infinite alternate;
+}
+
+@keyframes orbFloatLeft {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, 30px) scale(1.15); }
+}
+
+@keyframes orbFloatRight {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-35px, -30px) scale(1.12); }
+}
+
+.cta-luminous-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* Badge */
+.cta-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-charcoal);
+  background: #ffffff;
+  padding: 0.4rem 1.15rem;
+  border-radius: 100px;
+  border: 1px solid rgba(190, 211, 93, 0.5);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1.5rem;
+  animation: ctaBadgePulse 3.5s infinite ease-in-out;
+}
+
+@keyframes ctaBadgePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+/* Title & Subtitle */
+.cta-luminous-title {
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  color: var(--color-charcoal);
+  line-height: 1.18;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.text-highlight {
+  color: #72891b;
+  position: relative;
+  display: inline-block;
+}
+
+.cta-luminous-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-charcoal-light);
+  line-height: 1.65;
+  max-width: 740px;
+  margin: 0 auto 3rem;
+}
+
+/* 3-Step Process Ribbon */
+.cta-steps-ribbon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.cta-step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  padding: 1.25rem 1.35rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-step-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(190, 211, 93, 0.25);
+  border-color: var(--color-green);
+  background: #ffffff;
+}
+
+.step-number-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--color-green);
+  color: var(--color-charcoal);
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(190, 211, 93, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.cta-step-card:hover .step-number-badge {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.step-text-content h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-charcoal);
+  margin-bottom: 0.25rem;
+}
+
+.step-text-content p {
+  font-size: 0.8rem;
+  color: var(--color-charcoal-light);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* CTA Buttons */
+.cta-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.cta-btn-dark {
+  background: #111827;
+  color: #ffffff;
+  padding: 0.75rem 1.65rem;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px rgba(17, 24, 39, 0.25);
+  border: 1px solid #111827;
+}
+
+.cta-btn-dark:hover {
+  background: #1f2937;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.35);
+}
+
+.cta-btn-dark .btn-arrow-circle {
+  background: var(--color-green);
+  color: #111827;
+}
+
+.cta-btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.25);
+  border: 1px solid #25D366;
+}
+
+.cta-btn-whatsapp:hover {
+  background: #20bd5a;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.35);
+}
+
+.cta-btn-call {
+  background: #ffffff;
+  color: var(--color-charcoal);
+  padding: 0.75rem 1.35rem;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1.5px solid var(--color-border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-btn-call:hover {
+  border-color: var(--color-green);
+  background: var(--color-light-gray);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Bottom Perks */
+.cta-bottom-perks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-charcoal-light);
+}
+
+.perk-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.perk-icon {
+  color: #72891b;
+}
+
+.perk-divider {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cta-steps-ribbon {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cta-luminous-card {
+    padding: 3rem 2rem;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .cta-luminous-card {
+    padding: 2.25rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  .cta-buttons-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-btn-dark,
+  .cta-btn-whatsapp,
+  .cta-btn-call {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-bottom-perks {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .perk-divider {
+    display: none;
+  }
+}

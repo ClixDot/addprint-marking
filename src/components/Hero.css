@@ -1,0 +1,356 @@
+/* ==========================================================================
+   Hero Section - Ultra-Premium Industrial Production Design (Reference Match)
+   ========================================================================== */
+
+.hero-workshop {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #070e17;
+  color: #ffffff;
+  padding-top: 4.5rem;
+}
+
+/* ── Video Background ── */
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Centered on large screens */
+  z-index: 0;
+  filter: contrast(1.08) brightness(0.95);
+}
+
+.hero-workshop-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg, 
+    rgba(7, 14, 23, 0.88) 0%, 
+    rgba(7, 14, 23, 0.68) 40%, 
+    rgba(7, 14, 23, 0.35) 70%, 
+    rgba(7, 14, 23, 0.15) 100%
+  );
+  z-index: 1;
+}
+
+.hero-workshop-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.hero-workshop-content {
+  max-width: 680px;
+}
+
+/* Top Translucent Pill Badge */
+.hero-simple-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.75rem;
+}
+
+.tag-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-green);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--color-green);
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+/* Title Heading */
+.hero-workshop-title {
+  font-size: clamp(2.2rem, 4vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 1.4rem;
+}
+
+.text-green-highlight {
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* SVG Line Drawing Underline (Left to Right Load Animation) */
+.hero-line-svg {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.hero-line-svg path {
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: drawLineLeftToRight 1.2s cubic-bezier(0.25, 1, 0.5, 1) 0.25s forwards;
+  filter: drop-shadow(0 2px 4px rgba(190, 211, 93, 0.4));
+}
+
+@keyframes drawLineLeftToRight {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Description Subtext */
+.hero-simple-desc {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 2.25rem;
+  max-width: 580px;
+  font-weight: 400;
+}
+
+/* CTA Button Group */
+.hero-workshop-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn-main {
+  background: #ffffff !important;
+  color: #070e17 !important;
+  padding: 0.65rem 1.25rem 0.65rem 1.8rem !important;
+  font-weight: 800 !important;
+  font-size: 0.92rem !important;
+  border-radius: 100px !important;
+  border: 1px solid #ffffff !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-btn-main .btn-arrow-circle {
+  background: var(--color-green);
+  color: #070e17;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-btn-main:hover {
+  background: var(--color-green) !important;
+  border-color: var(--color-green) !important;
+  color: #070e17 !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 12px 30px rgba(190, 211, 93, 0.4) !important;
+}
+
+.hero-btn-main:hover .btn-arrow-circle {
+  background: #070e17;
+  color: #ffffff;
+  transform: rotate(-45deg);
+}
+
+.hero-btn-sec {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+  padding: 0.85rem 2rem !important;
+  font-weight: 700 !important;
+  font-size: 0.92rem !important;
+  border-radius: 100px !important;
+  backdrop-filter: blur(14px) !important;
+  transition: all 0.3s ease !important;
+}
+
+.hero-btn-sec:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) !important;
+}
+
+/* ── Content Fade Animation ── */
+.hero-content-animate {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-content-animate.fading {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* ── Slider Controls ── */
+.hero-slider-controls {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.hero-slider-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hero-slider-arrow:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.7);
+  transform: scale(1.08);
+}
+
+/* ── Dots ── */
+.hero-slider-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.hero-dot.active {
+  width: 28px;
+  border-radius: 4px;
+  background: var(--color-green);
+  box-shadow: 0 0 10px rgba(190,211,93,0.6);
+}
+
+/* ── Progress Bar ── */
+.hero-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.1);
+  z-index: 10;
+}
+
+.hero-progress-fill {
+  height: 100%;
+  background: var(--color-green);
+  box-shadow: 0 0 8px rgba(190,211,93,0.7);
+  animation: heroProgressBar 3s linear forwards;
+  width: 0;
+}
+
+@keyframes heroProgressBar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .hero-workshop-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-workshop-content {
+    max-width: 100%;
+  }
+
+  .hero-video-bg {
+    object-position: 75% center; /* Shift focus towards the machine on tablets */
+  }
+
+  .hero-simple-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-workshop-cta {
+    justify-content: center;
+  }
+
+  .hero-slider-controls {
+    bottom: 5.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-workshop {
+    padding-top: 6.5rem;
+    padding-bottom: 3.5rem;
+    height: 100vh;
+  }
+
+  .hero-video-bg {
+    object-position: 85% center; /* Shift further right on mobile to keep the machine visible */
+  }
+
+  .hero-workshop-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-workshop-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btn-main, .hero-btn-sec {
+    width: 100%;
+    justify-content: center;
+  }
+}

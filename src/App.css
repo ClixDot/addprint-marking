@@ -1,0 +1,4 @@
+/* App specific overrides if any */
+.app-wrapper {
+  overflow-x: hidden;
+}
